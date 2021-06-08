@@ -3,7 +3,7 @@ package client
 import (
 	"net"
 	"log"
-	"github.com/nu7hatch/gouuid"
+	//"github.com/nu7hatch/gouuid"
 )
 
 type Client struct {
@@ -13,12 +13,12 @@ type Client struct {
 }
 
 func NewClient(c net.Conn, reciever bool) *Client{
-	u, err := uuid.NewV4()
-	if err != nil{
-		log.Fatal("unable to assign uuid to client")
-	}
+	//u, err := uuid.NewV4()
+	// if err != nil{
+	// 	log.Fatal("unable to assign uuid to client")
+	// }
 	return &Client{
-		Id: u.String(),
+		Id: "something-here-uniquey",
 		Connection: c,
 		isReciever: reciever,
 	}
